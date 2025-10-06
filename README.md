@@ -17,15 +17,15 @@ This training pipeline demonstrates:
 ---
 
 ## Folder Structure
-
+```
 <repo-root>/
 ├─ Data/
 │ ├─ train_11.npy # training input features
 │ ├─ train_label_11.npy # corresponding training labels
 │ └─ test_11.npy # test input features
-├─ timit_dnn.py # main training script
+├─ driver.py # main training script
 └─ README.md
-
+```
 ---
 
 ## Data Format
@@ -44,7 +44,7 @@ In the dataset loader, each frame (39-dimensional MFCC) is restructured into con
 
 ## Configuration
 
-You can adjust the hyperparameters in the `__main__` block of `timit_dnn.py`:
+You can adjust the hyperparameters in the `__main__` block of `driver.py`:
 
 ```python
 Epochs = 50
@@ -99,7 +99,7 @@ If you’re running in a headless environment (e.g., SSH or server), disable plo
 
 ## How to Run
 ```bash
-python timit_dnn.py
+python driver.py
 ```
 You’ll see:
 
